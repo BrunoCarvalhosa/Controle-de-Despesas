@@ -1,28 +1,25 @@
 # 📊 Controle de Despesas Pessoal
 
-**Projeto final da disciplina Ferramentas de Programação III (6º semestre)**  
-Aplicativo híbrido em JavaScript e Ionic para gerenciar receitas e despesas pessoais, com cadastro de usuário e validações de dados.
+**Trabalho final da disciplina de Ferramentas de Programação III (6º semestre)**  
+Full-stack com NestJS (backend) e Ionic (frontend) para gerenciar receitas, despesas e usuários.
 
-## 🔍 Descrição
+## Funcionalidades
+- Cadastro/login de usuário (JWT)
+- CRUD de receitas e despesas
+- Resumo de saldo (receitas – despesas)
 
-Este projeto permite que um usuário:
-- Cadastre-se com validações de campos (nome, e-mail, senha, etc.) conforme especificações da disciplina;
-- Lance receitas e despesas, informando valor, categoria e data;
-- Visualize um resumo de seu balanço financeiro (total de receitas, total de despesas e saldo);
+## Tecnologias
+- **Backend**: NestJS, TypeORM, MySQL, @nestjs/config, JWT  
+- **Frontend**: Ionic, Angular, TypeScript, Ionic Storage
 
-O foco foi demonstrar o uso de componentes do Ionic, armazenamento local e boas práticas de validação em formulários.
+## Como rodar
 
-## 🚀 Tecnologias
+### Backend
+```bash
+npm install
+# crie .env com DB_HOST, DB_PORT, DB_USERNAME, DB_PASSWORD, DB_DATABASE, JWT_SECRET
+npm run start:dev
 
-- **Ionic Framework** 
-- **TypeScript**  
-- Ionic Components
-- **Storage**: Ionic Storage
-
-## 🛠️ Pré-requisitos
-
-- Node.js
-- npm 
-- Ionic CLI:  
-  ```bash
-  npm install -g @ionic/cli
+npm install
+# ajuste apiUrl em src/environments/environment.ts (ex.: http://localhost:3000)
+ionic serve
