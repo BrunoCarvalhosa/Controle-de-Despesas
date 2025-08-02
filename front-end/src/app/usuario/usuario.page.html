@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title id="titulo">Controle de Despesas <span *ngIf="nome">- {{ nome }}</span>
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button id="botao-perfil" (click)="atualizarPerfilRota(usuario.id)" color="warning" > Atualizar Perfil</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button color="danger" (click)="desconectar()">Sair</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Receitas -->
+  <ion-list>
+    <ion-list-header>
+      <ion-label class="topicos">Receitas</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let receita of receitas">
+      <ion-label>{{ receita.descricao }}</ion-label>
+      <ion-note slot="end" class="tabelaReceitas">{{ receita.valor | currency:'BRL' }}</ion-note>
+      <ion-button slot="end" color="warning" (click)="atualizarReceitaRota(receita.id)">
+        Atualizar
+      </ion-button>
+      <ion-button slot="end" color="danger" (click)="deletarReceita(receita.id)">
+        Excluir
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <!-- Despesas -->
+  <ion-list>
+    <ion-list-header>
+      <ion-label class="topicos">Despesas</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let despesa of despesas">
+      <ion-label>{{ despesa.descricao }}</ion-label>
+      <ion-note slot="end" class="tabelaDespesas">{{ despesa.valor | currency:'BRL' }}</ion-note>
+      <ion-button slot="end" color="warning" (click)="atualizarDespesaRota(despesa.id)">Atualizar</ion-button>
+      <ion-button slot="end" color="danger" (click)="deletarDespesa(despesa.id)">
+        Excluir
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <!-- Botões -->
+  <div class="botao-container">
+    <ion-button expand="block" color="success" routerLink="/cadastrareceita">Cadastrar Receita</ion-button>
+    <ion-button expand="block" color="danger" routerLink="/cadastradespesa">Cadastrar Despesa</ion-button>
+  </div>
+
+  <div class="total-container">
+    <div class="card receitas">
+      <strong>Receitas:</strong>
+      <span>{{ somaRec | currency:'BRL' }}</span>
+    </div>
+    <div class="card despesas">
+      <strong>Despesas:</strong>
+      <span>{{ somaDesp | currency:'BRL' }}</span>
+    </div>
+    <div class="card total" [class.positivo]="total >= 0" [class.negativo]="total < 0">
+      <strong>Total:</strong>
+      <span>{{ total | currency:'BRL' }}</span>
+    </div>
+  </div>
+
+
+</ion-content>

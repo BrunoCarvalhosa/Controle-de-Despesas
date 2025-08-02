@@ -1,0 +1,67 @@
+#titulo {
+    font-style: italic;
+    font-weight: bold;
+    //color: #c4d1fc;
+}
+
+#botao-perfil {
+    margin-right: 10px;
+}
+
+
+.topicos {
+    font-size: 1.2rem;
+    color: #fcf575;
+}
+
+.tabelaReceitas {
+    font-size: 0.9rem;
+    color: #4de47b;
+}
+
+.tabelaDespesas {
+    font-size: 0.9rem;
+    color: #ec6464;
+}
+
+/* Estilo do contêiner */
+.total-container {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    border: 1px solid #a8a0a0;
+    border-radius: 8px;
+    padding: 15px;
+    width: 30%;
+    text-align: center;
+    margin: 10px;
+    font-size: 1.2em;
+  }
+  
+  .card span {
+    display: block;
+    margin-top: 5px;
+    font-weight: bold;
+  }
+  
+  .receitas {
+    background-color: #1ac74e;
+  }
+  
+  .despesas {
+    background-color: #ec6464;
+  }
+  
+  .total.positivo {
+    background-color: #1ac74e;
+  }
+  
+  .total.negativo {
+    background-color: #ec6464;
+  }
+  

@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Cadastrar Usuário</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="warning" (click)="voltar()">Voltar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (submit)="salvarUsuario()">
+    <ion-item>
+      <ion-label position="stacked">Nome</ion-label>
+      <ion-input [(ngModel)]="novoUsuario.nome" name="nome" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Sobrenome</ion-label>
+      <ion-input [(ngModel)]="novoUsuario.sobrenome" name="sobrenome" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Idade</ion-label>
+      <ion-input
+        type="number"
+        [(ngModel)]="novoUsuario.idade"
+        name="idade"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Email</ion-label>
+      <ion-input [(ngModel)]="novoUsuario.email" name="email" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Senha</ion-label>
+      <ion-input [(ngModel)]="novoUsuario.senha" name="senha" required></ion-input>
+    </ion-item>
+    
+
+    <ion-button expand="block" type="submit" color="success">Salvar</ion-button>
+    <ion-button expand="block" color="danger" (click)="voltar()">Cancelar</ion-button>
+  </form>
+</ion-content>

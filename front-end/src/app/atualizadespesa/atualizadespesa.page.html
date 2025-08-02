@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Atualizar Despesa</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="warning" (click)="voltar()">Voltar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (submit)="atualizarDespesa()">
+    <ion-item>
+      <ion-label position="stacked">Descrição</ion-label>
+      <ion-input [(ngModel)]="despesa.descricao" name="descricao" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Valor</ion-label>
+      <ion-input
+        type="number"
+        [(ngModel)]="despesa.valor"
+        name="valor"
+        presentation="date" 
+        required
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Data</ion-label>
+      <br/>
+      <ion-datetime
+        [(ngModel)]="despesa.data"
+        name="data"
+        display-format="DD/MM/YYYY"
+        presentation="date" 
+        required
+      ></ion-datetime>
+      <br/>
+    </ion-item>
+
+    <ion-button expand="block" type="submit" color="success">Atualizar</ion-button>
+    <ion-button expand="block" color="danger" (click)="voltar()">Cancelar</ion-button>
+  </form>
+</ion-content>

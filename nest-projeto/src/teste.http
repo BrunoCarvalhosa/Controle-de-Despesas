@@ -1,0 +1,110 @@
+# Definindo a variável para o hostname
+@hostname = http://localhost:3000
+
+
+###
+POST {{hostname}}/usuario
+Content-Type: application/json
+
+{
+  "nome": "bruno",
+  "sobrenome": "Carvalho",
+  "idade": 16,
+  "email": "bruno_carvalho@gmail.com",
+  "senha": "123"
+}
+
+###
+GET {{hostname}}/usuario
+
+
+### 
+DELETE {{hostname}}/usuario/1
+
+###
+PUT {{hostname}}/usuario/1
+Content-Type: application/json
+
+{
+  "nome": "bruno",
+  "sobrenome": "Carvalho",
+  "idade": 18,
+  "email": "bruno_carvalho@gmail.com",
+  "senha": "123"
+}
+
+###
+POST {{hostname}}/receita
+Content-Type: application/json
+
+{
+  "descricao": "Salário",
+  "valor": 5000,
+  "data": "2024-01-15",
+  "usuario": {
+    "id": 1
+  }
+}
+
+###
+GET {{hostname}}/receita
+
+###
+PUT {{hostname}}/receita/1
+Content-Type: application/json
+
+{
+  "descricao": "Salário Mensal",
+  "valor": 5500,
+  "data": "2024-01-15"
+}
+
+###
+DELETE {{hostname}}/receita/1
+
+###
+POST {{hostname}}/despesa
+Content-Type: application/json
+
+{
+  "descricao": "brasil",
+  "valor": 0,
+  "data": "2024-01-05",
+  "usuario": {
+    "id": 1
+  }
+}
+
+###
+GET {{hostname}}/despesa?usuarioId=3
+
+
+###
+PUT {{hostname}}/despesa/1
+Content-Type: application/json
+
+{
+  "descricao": "Aluguel Mensal",
+  "valor": 1250,
+  "data": "2024-01-05"
+}
+
+###
+DELETE {{hostname}}/despesa/1
+
+###
+GET {{hostname}}/auth/profile
+
+###
+POST {{hostname}}/auth/login
+Content-Type: application/json
+
+{
+    "username": "bruno",
+    "password": "123"
+
+}
+
+###
+GET {{hostname}}/auth/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiQnJ1bm8iLCJpYXQiOjE3MzIxOTQ1MjIsImV4cCI6MTczMjE5NDU4Mn0.XeTfVaJHbz4VXz3ccesCaOeAx8X_dtI3H2tAfRp1I1I

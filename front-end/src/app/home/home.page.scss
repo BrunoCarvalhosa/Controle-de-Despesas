@@ -1,0 +1,95 @@
+#container {
+  text-align: center;
+  position: absolute;
+  left: 2%;
+  top: 8%;
+  transform: translateY(-50%, -50%);
+  width: 100%;
+  max-width: 400px;
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+  color: #8c8c8c;
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 5px;
+  background: rgb(90, 114, 219);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  text-align: center;
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #333333;
+}
+
+.login-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #f4f4f9;
+}
+
+ion-list {
+  margin: 0;
+}
+
+ion-item {
+  --inner-padding-top: 8px;
+  --inner-padding-bottom: 8px;
+  --background: transparent;
+  margin-bottom: 10px;
+}
+
+ion-input {
+  --padding-start: 10px;
+  --background:rgba(114, 104, 104, 0.733);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  height: 45px;
+}
+
+ion-input:hover {
+  color:rgb(76, 106, 238); 
+}
+
+#login-botão {
+  margin-top: 20px;
+  background-color: rgb(90, 114, 219);
+  color: white;
+  width: 100%;
+  height: 50px;
+  font-size: 1rem;
+  border-radius: 8px;
+  --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#cadastrar-botão {
+  margin-top: 1px;
+  background-color: rgb(132, 177, 10);
+  color: white;
+  margin-left: 85px;
+  width: 50%;
+  height: 25px;
+  font-size: 0.8rem;
+  border-radius: 8px;
+  --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
